@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body{
+    background-color: #f1f3f6;
+    font-family: "OpenSans";
+    margin-bottom: 60px;
+}
+.whitevolvo{
+	font-family: "VolvoWhite";
+}
+.darkvolvo{
+	font-family: "VolvoBlack";
+}
+img{
+	max-width: 100%;
+}
+.input-group{
+	margin-bottom: 10px;
+}
+.wrapper{
+    background-color: white;
+    min-height: 100%;
+	margin-bottom: 70px;
+}
+.notice{
+	width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.success{
+	background: rgb(11, 154, 11);
+	color:white;
+}
+
+.error{
+	background: red;
+	color:white;
+}
+/* Header */
+.top-line{
+    background-color: #728da3;
+    color: white;
+}
+.top-line a{
+	color: white;
+}
+
+.top-line a:hover{
+	color: white;
+}
+.header-content{
+    background-color: white;
+	height: 150px;
+	border-left: 1px solid #728DA3;
+    border-right: 1px solid #728DA3;
+}
+.header-content a{
+	color: black;
+}
+.header-content a:hover, .header-content a:active, .header-content a:focus{
+	color: black;
+	text-decoration: none;
+}
+.header-content div:first-child, .header-content div:last-child{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+    height: 100%;
+}
+.header-content div:first-child img, .header-content div:last-child img{
+	max-width: 70%;	
+}
+.header-content div:nth-child(2) h1, .header-content div:nth-child(2) h3{
+    text-align: center;
+	font-size: 3em;
+    line-height: 0.7em;
+}
+.header-content div:nth-child(2) h4{
+	font-size: 28px;
+}
+h4.callback-buttons{
+	font-size: 17px;
+}
+button.btn-volvo{
+	height: 30px;
+    background-color: white;
+    color: #728da3;
+    font-family: "OpenSans";
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 5px 10px;
+    border: 1px solid #728da3;
+    border-radius: 8px;
+}
+button.btn-volvo:hover{
+	display: block;
+    background-color: #728da3;
+    color: white;
+    font-family: "OpenSans";
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 5px 10px;
+    border: 1px solid #728da3;
+    border-radius: 8px;
+}
+button.btn-volvo p{
+	margin: 0;
+	padding-left: 10px;
+	float: right;
+	display: block;
+}
+/* Меню */
+nav.top-menu{
+	background-color: transparent;
+    border: 1px solid #728DA3;
+    border-radius: 0;
+}
+nav.top-menu .navbar-nav>.active>a, nav.top-menu .navbar-nav>.active>a:focus, nav.top-menu .navbar-nav>.active>a:hover{
+	color: white;
+    background-color: #728DA3;
+}
+nav.top-menu .navbar-nav>li>a{
+	color: #728DA3;
+}
+nav.top-menu .navbar-nav>li>a:focus, nav.top-menu .navbar-nav>li>a:hover{
+	color: #728DA3;
+	outline: 1px solid #728DA3;
+}
+/* Слайдер и сетка услуг */
+div.slider{
+	padding-left: 0;
+}
+div.service-grid{
+    padding: 5px;
+	padding-top: 13px;
+    background: #E0D4BA;
+	margin-bottom: 15px;
+}
+div.service-grid-item{
+    cursor: pointer;
+    height: auto;
+    width: 32%;
+    padding: 0;
+    margin-right: 2%;
+	margin-bottom: 2%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    background: #EBE8D9;
+    text-align: center;
+}
+div.service-grid-item-last{
+	margin-right: 0;
+	cursor: pointer;
+    height: auto;
+    width: 32%;
+    padding: 0;
+	margin-bottom: 2%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    background: #EBE8D9;
+    text-align: center;
+}
+div.service-grid-item:hover, div.service-grid-item-last:hover{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+div.service-grid-item img{
+	height: 70px;
+}
+span.caption{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    color: #EBE8D9;
+    font-size: 12px;
+    white-space: normal;
+    background: #716B5E;
+}
+.grid-label{
+	font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #716B5E;
+}
+.event-list{
+	padding-left: 15px;
+	margin-bottom: 15px;
+}
+.event-item{
+	padding: 0;
+}
+.event-item:hover .thumbnail{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.event-item h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "VolvoBlack";
+	font-size: 30px;
+}
+.event-item h4 {
+	text-align: center;
+	font-size: 14px;
+}
+div.event-item>a:hover, a:hover {
+	text-decoration: none!important;
+}
+/* Сайдбар */
+#sidebar{
+	padding: 0;
+}
+#vk_groups{
+	margin-bottom: 10px;
+}
+/* Спойлер */
+.spoiler{
+	width: 95%;
+	margin: 0 auto;
+	border: 1px solid #728da3;
+}
+.spoiler .spoilerHeader{
+	background: #728da3;
+	color: white;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+.spoiler .spoilerBody{
+	padding: 5px 15px;
+}
+/* Подвал */
+#footer{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+	text-align: center;
+}
+#footer>div.container{
+    background-color: #728da3;
+    height: 100%;
+	text-align: center;
+}
+#footer>div.container .row{
+	margin-top: 15px;
+}
+#footer>div.container img{
+	max-width: 70%;
+}
+/* Adaptive version */
+
+@media (min-width: 768px) {
+   .navbar.navbar-default.top-menu .navbar-collapse{
+	display: flex!important;
+	justify-content: center;
+}
+}
+@media (min-width: 320px) and (max-width: 800px) {
+    .top-line{
+        text-align: center;
+    }
+    .phone-hidden{
+        display: none!important;
+    }
+	nav.top-menu{
+		border-top: 1px solid transparent;
+	}
+	.callback-buttons>button{
+	    margin-right: 71px;	
+		margin-bottom: 5px;
+	}
+	.callback-buttons>a button{
+	    margin-left: 90px;	
+	}
+	.slider{
+		display: none;
+	}
+	
+}

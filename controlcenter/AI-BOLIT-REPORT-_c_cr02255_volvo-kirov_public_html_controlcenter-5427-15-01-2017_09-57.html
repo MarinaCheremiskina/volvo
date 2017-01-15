@@ -1,0 +1,534 @@
+<html>
+<head>
+<!-- revisium.com/ai/ -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+<title>Отчет по /home/c/cr02255/volvo-kirov/public_html/controlcenter</title>
+<style type="text/css" title="currentStyle">
+	@import "https://revisium.com/extra/media/css/demo_page2.css";
+	@import "https://revisium.com/extra/media/css/jquery.dataTables2.css";
+</style>
+
+<script type="text/javascript" language="javascript" src="https://yandex.st/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://datatables.net/download/build/jquery.dataTables.js"></script>
+
+<style type="text/css">
+ body 
+ {
+   font-family: Tahoma;
+   color: #5a5a5a;
+   background: #FFFFFF;
+   font-size: 14px;
+   margin: 20px;
+   padding: 0;
+ }
+
+.header
+ {
+   font-size: 34px;
+   margin: 0 0 10px 0;
+ }
+
+ .hidd
+ {
+    display: none;
+ }
+ 
+ .ok
+ {
+    color: green;
+ }
+ 
+ .line_no
+ {
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+
+   background: #DAF2C1;
+   padding: 2px 5px 2px 5px;
+   margin: 0 5px 0 5px;
+ }
+ 
+ .credits_header 
+ {
+  -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+
+   background: #F2F2F2;
+   padding: 10px;
+   font-size: 11px;
+    margin: 0 0 10px 0;
+ }
+ 
+ .marker
+ {
+    color: #FF0090;
+	font-weight: 100;
+	background: #FF0090;
+	padding: 2px 0px 2px 0px;
+	width: 2px;
+ }
+ 
+ .title
+ {
+   font-size: 24px;
+   margin: 20px 0 10px 0;
+   color: #9CA9D1;
+}
+
+.summary 
+{
+  float: left;
+  width: 500px;
+}
+
+.summary TD
+{
+  font-size: 12px;
+  border-bottom: 1px solid #F0F0F0;
+  font-weight: 700;
+  padding: 10px 0 10px 0;
+}
+ 
+.crit, .vir
+{
+  color: #D84B55;
+}
+
+.intitem
+{
+  color:#4a6975;
+}
+
+.spacer
+{
+   margin: 0 0 50px 0;
+   clear:both;
+}
+
+.warn
+{
+  color: #F6B700;
+}
+
+.clear
+{
+   clear: both;
+}
+
+.offer
+{
+  -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+
+   width: 500px;
+   background: #ECF7DE;
+   color: #747474;
+   font-size: 11px;
+   font-family: Arial;
+   padding: 20px;
+   margin: 20px 0 0 500px;
+   
+   font-size: 16px;
+}
+ 
+.flist
+{
+   font-family: Arial;
+}
+
+.flist TD
+{
+   font-size: 11px;
+   padding: 5px;
+}
+
+.flist TH
+{
+   font-size: 12px;
+   height: 30px;
+   padding: 5px;
+   background: #CEE9EF;
+}
+
+
+.it
+{
+   font-size: 14px;
+   font-weight: 100;
+   margin-top: 10px;
+}
+
+.crit .it A {
+   color: #E50931; 
+   line-height: 25px;
+   text-decoration: none;
+}
+
+.warn .it A {
+   color: #F2C900; 
+   line-height: 25px;
+   text-decoration: none;
+}
+
+
+
+.details
+{
+   font-family: Calibri;
+   font-size: 12px;
+   margin: 10px 10px 10px 0px;
+}
+
+.crit .details
+{
+   color: #A08080;
+}
+
+.warn .details
+{
+   color: #808080;
+}
+
+.details A
+{
+  color: #FFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 2px;
+  background: #E5CEDE;
+  -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+}
+
+.details A:hover
+{
+   background: #A0909B;
+}
+
+.ctd
+{
+   margin: 10px 0px 10px 0;
+   align:center;
+}
+
+.ctd A 
+{
+   color: #0D9922;
+}
+
+.disclaimer
+{
+   color: darkgreen;
+   margin: 10px 10px 10px 0;
+}
+
+.note_vir
+{
+   margin: 10px 0 10px 0;
+   //padding: 10px;
+   color: #FF4F4F;
+   font-size: 15px;
+   font-weight: 700;
+   clear:both;
+  
+}
+
+.note_warn
+{
+   margin: 10px 0 10px 0;
+   color: #F6B700;
+   font-size: 15px;
+   font-weight: 700;
+   clear:both;
+}
+
+.note_int
+{
+   margin: 10px 0 10px 0;
+   color: #60b5d6;
+   font-size: 15px;
+   font-weight: 700;
+   clear:both;
+}
+
+.updateinfo
+{
+  color: #FFF;
+  text-decoration: none;
+  background: #E5CEDE;
+  -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+
+  margin: 10px 0 10px 0px;   
+  padding: 10px;
+}
+
+
+.caution
+{
+  color: #EF7B75;
+  text-decoration: none;
+  margin: 20px 0 0px 0px;   
+  font-size: 12px;
+}
+
+.footer
+{
+  color: #303030;
+  text-decoration: none;
+  background: #F4F4F4;
+  -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+
+  margin: 80px 0 10px 0px;   
+  padding: 10px;
+}
+
+.rep
+{
+  color: #303030;
+  text-decoration: none;
+  background: #94DDDB;
+  -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+
+  margin: 10px 0 10px 0px;   
+  padding: 10px;
+  font-size: 12px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="header">Отчет сканера <a href="https://revisium.com/ai/">AI-Bolit</a> v20170110: /home/c/cr02255/volvo-kirov/public_html/controlcenter/ (2/1)</div>
+<div class="credits_header">Скрипт бесплатный только для личного некоммерческого использования. Есть <a href="https://revisium.com/ai/faq.php#faq11" target=_blank>коммерческая лицензия</a> (пункт №11).</div>
+<div class="details_header">
+   Затрачено времени: <b>14 s</b>. Сканирование начато 15-01-2017 в 09:57:24, сканирование завершено 15-01-2017 в 09:57:37<br/>
+   Всего проверено 69 директорий и 771 файлов. Использовано памяти при сканировании: 6.15 Mb.
+ </div>
+
+ 
+ 
+ <div class="summary">
+<div class="title">Сводный отчет</div><table cellspacing=0 border=0><tr><td class="crit" width=400>Вредоносных скриптов</td><td class="crit">4</td></tr><tr><td class="warn" width=400>Рекламных ссылок и кодов</td><td class="warn">1</td></tr></table><!--[json]{"redirect":0,"critical_php":4,"critical_js":0,"phishing":0,"unix_exec":0,"iframes":0,"not_read":0,"base64":0,"heuristics":0,"symlinks":0,"big_files_skipped":0}[/json]--><div class=details style="margin: 20px 20px 20px 0">Обращаем внимание, что обнаруженные файлы не всегда являются вирусами и хакерскими скриптами. Сканер старается минимизировать число ложных обнаружений, но это не всегда возможно, так как найденный фрагмент может встречаться как во вредоносных скриптах, так и в обычных.</div>
+
+ </div>
+ 
+ <div class="offer">
+    <div>
+	 <div class="crit" style="font-size: 17px;"><b>Внимание! Наш сканер обнаружил подозрительный или вредоносный код</b>.</div> 
+	 <br/>Скорее всего, ваш сайт был взломан и заражен. Рекомендуем срочно <a href="https://revisium.com/ru/order/" target=_blank>обратиться за консультацией</a> к специалистам по информационной безопасности.
+	</div>
+	<br/>
+	<div>
+	   Пришлите нам отчет в архиве .zip на <a href="mailto:ai@revisium.com">ai@revisium.com</a> для проверки вашего сайта на вирусы и взлом.<p>
+	   Компания "<a href="https://revisium.com/">Ревизиум</a>" - лечение сайта от вирусов и защита от взлома.
+	   <p><hr size=1></p>
+	   Также выполните дополнительный анализ новым <b><a href="http://rescan.pro/?utm=aibolit" target=_blank>веб-сканером ReScan.Pro</a></b>.
+	</div>
+	<br/>
+	
+    <div class="caution">Не оставляйте файл отчета на сервере, и не давайте на него прямых ссылок с других сайтов. Информация из отчета может быть использована злоумышленниками для взлома сайта, так как содержит информацию о настройках сервера, файлах и каталогах.</div>
+ </div>
+  
+ <div class="clear"></div>
+ 
+ <div class="title">Критические замечания</div><div class="note_vir">Уязвимости в скриптах (1)</div><div class="crit"><li>/home/c/cr02255/volvo-kirov/public_html/controlcenter/includes/controls/phpmailer/class.phpmailer.php - RCE : CVE-2016-10045, CVE-2016-10031</li></div><p>
+<div class="note_vir">Эти файлы могут быть вредоносными или хакерскими скриптами (4)</div><div class="crit"><div class="flist"><table cellspacing=1 cellpadding=4 border=0 id="table_crit"><thead><tr class="tbgh0"><th width=70%>Путь</th><th>Изменение свойств</th><th>Изменение содержимого</th><th width=90>Размер</th><th width=0 class="hidd">CRC32</th><th width=0 class="hidd"></th><th width=0 class="hidd"></th><th width=0 class="hidd"></th></tr></thead><tbody><tr class="tbg0" o="id_1c01d137"><td><div class="it"><a class="it">/home/c/cr02255/volvo-kirov/public_html/controlcenter/actions/files.dynamic.php</a></div><div class="details"><a href="#" onclick="return hsig('id_1c01d137')">[x]</a> <span class="line_no">1</span>…_POST[&#039;path&#039;].&#039;/&#039;.$userfile[&#039;name&#039;])){if(strtoupper(substr(PHP_OS,0,3))!=&#039;WIN&#039;)<span class="marker">&nbsp;</span>chmod($_POST[&#039;path&#039;].&quot;/&quot;.$userfile[&#039;name&#039;],$new_file_permissions);$msg.=&#039;&lt;p&gt;&lt;sp</div></td><td align=center><div class="ctd">13/01/2017 16:11:29</div></td><td align=center><div class="ctd">13/01/2017 11:06:19</div></td><td align=center><div class="ctd">28.45 Kb</div></td><td class="hidd"><div class="hidd">3eae9cd0bd6f24466fb52ad8aacb5081c6c9f6c7</div></td><td class="hidd"><div class="hidd">1484313089</div></td><td class="hidd"><div class="hidd">1484294779</div></td><td class="hidd"><div class="hidd">id_1c01d137</div></td></tr><tr class="tbg1" o="id_ea1bc104"><td><div class="it"><a class="it">/home/c/cr02255/volvo-kirov/public_html/controlcenter/includes/document.parser.class.inc.php</a></div><div class="details"><a href="#" onclick="return hsig('id_ea1bc104')">[x]</a> <span class="line_no">1</span>…$MakeTable-&gt;create($table,array(&#039;Basic info&#039;,&#039;&#039;));$str.=&quot;&lt;br /&gt;&quot;;$table=array();<span class="marker">&nbsp;</span>$table[]=array(&#039;MySQL&#039;,&#039;[^qt^]([^q^] Requests)&#039;);$table[]=array(&#039;PHP&#039;,&#039;[^p^]&#039;);</div></td><td align=center><div class="ctd">13/01/2017 16:11:29</div></td><td align=center><div class="ctd">13/01/2017 11:06:19</div></td><td align=center><div class="ctd">212.13 Kb</div></td><td class="hidd"><div class="hidd">b5873bf3e97a25beea7233196afbf9a0d74bdf9c</div></td><td class="hidd"><div class="hidd">1484313089</div></td><td class="hidd"><div class="hidd">1484294779</div></td><td class="hidd"><div class="hidd">id_ea1bc104</div></td></tr><tr class="tbg0" o="id_87f31b28"><td><div class="it"><a class="it">/home/c/cr02255/volvo-kirov/public_html/controlcenter/includes/extenders/modifiers.class.inc.php</a></div><div class="details"><a href="#" onclick="return hsig('id_87f31b28')">[x]</a> <span class="line_no">1</span>…}return$result;}function parsePhx($key,$value,$modifiers){global$modx;$cacheKey=<span class="marker">&nbsp;</span>md5(sprintf(&#039;parsePhx#%s#%s#%s&#039;,$key,$value,print_r($modifiers,true)));if(isset</div></td><td align=center><div class="ctd">13/01/2017 16:11:29</div></td><td align=center><div class="ctd">13/01/2017 11:06:19</div></td><td align=center><div class="ctd">43.50 Kb</div></td><td class="hidd"><div class="hidd">1a7608847483c1a65acc1ba8dc3c26000ab6531d</div></td><td class="hidd"><div class="hidd">1484313089</div></td><td class="hidd"><div class="hidd">1484294779</div></td><td class="hidd"><div class="hidd">id_87f31b28</div></td></tr><tr class="tbg1" o="id_4461c354"><td><div class="it"><a class="it">/home/c/cr02255/volvo-kirov/public_html/controlcenter/includes/protect.inc.php</a></div><div class="details"><a href="#" onclick="return hsig('id_4461c354')">[x]</a> <span class="line_no">1</span>…s: 422 Unprocessable Entity&#039;);die();}if(isset($_SERVER[&#039;QUERY_STRING&#039;])&amp;&amp;strpos(<span class="marker">&nbsp;</span>urldecode($_SERVER[&#039;QUERY_STRING&#039;]),&#039;·&#039;)!==false) die();if(ini_get(&#039;register_gl</div></td><td align=center><div class="ctd">13/01/2017 16:11:29</div></td><td align=center><div class="ctd">13/01/2017 11:06:20</div></td><td align=center><div class="ctd">2.26 Kb</div></td><td class="hidd"><div class="hidd">bf8e2fb3903aca6c2843d07e3b51de8a20830e50</div></td><td class="hidd"><div class="hidd">1484313089</div></td><td class="hidd"><div class="hidd">1484294780</div></td><td class="hidd"><div class="hidd">id_4461c354</div></td></tr></tbody></table></div><div class=clear style="margin: 20px 0 0 0"></div></div>
+<div style="margin-top: 20px" class="title">Предупреждения</div><div class="note_warn">Дорвеи, реклама, спам-ссылки, редиректы</div><div class="warn"><div class="flist"><table cellspacing=1 cellpadding=4 border=0 id="table_7730488"><thead><tr class="tbgh0"><th width=70%>Путь</th><th>Изменение свойств</th><th>Изменение содержимого</th><th width=90>Размер</th><th width=0 class="hidd">CRC32</th><th width=0 class="hidd"></th><th width=0 class="hidd"></th><th width=0 class="hidd"></th></tr></thead><tbody><tr class="tbg0" o="id_z2766651"><td><div class="it"><a class="it">/home/c/cr02255/volvo-kirov/public_html/controlcenter/actions/sysinfo.static.php</a></div><div class="details"><span class="line_no">1</span>…lease_date&#039;),&#039;PHP Version&#039;=&gt;phpversion(),&#039;phpInfo()&#039;=&gt;&#039;&lt;a href=&quot;#&quot; onclick=&quot;view<span class="marker">&nbsp;</span>PHPInfo();return false;&quot;&gt;&#039;.$_lang[&#039;view&#039;].&#039;&lt;/a&gt;&#039;,$_lang[&#039;access_permissions&#039;]=&gt;</div></td><td align=center><div class="ctd">13/01/2017 16:11:29</div></td><td align=center><div class="ctd">13/01/2017 11:06:19</div></td><td align=center><div class="ctd">9.28 Kb</div></td><td class="hidd"><div class="hidd">f2cd219e8a902b4097b462f2553631c07281189a</div></td><td class="hidd"><div class="hidd">1484313089</div></td><td class="hidd"><div class="hidd">1484294779</div></td><td class="hidd"><div class="hidd">id_z2766651</div></td></tr></tbody></table></div><div class=clear style="margin: 20px 0 0 0"></div></div>
+
+ 
+	<div class="footer">
+	   <div class="disclaimer"><span class="vir">[!]</span> Отказ от гарантий: невозможно гарантировать обнаружение всех вредоносных скриптов. Поэтому разработчик сканера не несет ответственности за возможные последствия работы сканера AI-Bolit или неоправданные ожидания пользователей относительно функциональности и возможностей.
+   </div>
+   <div class="thanx">
+      Замечания и предложения по работе скрипта, а также не обнаруженные вредоносные скрипты вы можете присылать на <a href="mailto:ai@revisium.com">ai@revisium.com</a>.<br/>
+      Также будем чрезвычайно благодарны за любые упоминания сканера AI-Bolit на вашем сайте, в блоге, среди друзей, знакомых и клиентов. <br/>Ссылку можно поставить на страницу <a href="https://revisium.com/ai/">https://revisium.com/ai/</a>.<br/> 
+     <p>Получить консультацию или задать вопросы можно по email <a href="mailto:ai@revisium.com">ai@revisium.com</a>.</p> 
+	</div>
+	</div>
+	
+<script language="javascript">
+
+function hsig(id) {
+  var divs = document.getElementsByTagName("tr");
+  for(var i = 0; i < divs.length; i++){
+     
+     if (divs[i].getAttribute('o') == id) {
+        divs[i].innerHTML = '';
+     }
+  }
+
+  return false;
+}
+
+
+$(document).ready(function(){
+    $('#table_crit').dataTable({
+       "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+       "aoColumns": [
+                                     {"iDataSort": 7, "width":"70%"},
+                                     {"iDataSort": 5},
+                                     {"iDataSort": 6},
+                                     {"bSortable": true},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false}
+                     ],
+		"paging": true,
+       "iDisplayLength": 500,
+		"oLanguage": {
+			"sLengthMenu": "Отображать по _MENU_ записей",
+			"sZeroRecords": "Ничего не найдено",
+			"sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+			"sInfoEmpty": "Нет файлов",
+			"sInfoFiltered": "(всего записей _MAX_)",
+			"sSearch":       "Поиск:",
+			"sUrl":          "",
+			"oPaginate": {
+				"sFirst": "Первая",
+				"sPrevious": "Предыдущая",
+				"sNext": "Следующая",
+				"sLast": "Последняя"
+			},
+			"oAria": {
+				"sSortAscending": ": активировать для сортировки столбца по возрастанию",
+				"sSortDescending": ": активировать для сортировки столбцов по убыванию"	
+			}
+		}
+
+     } );
+
+});
+
+$(document).ready(function(){
+    $('#table_vir').dataTable({
+       "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+		"paging": true,
+       "aoColumns": [
+                                     {"iDataSort": 7, "width":"70%"},
+                                     {"iDataSort": 5},
+                                     {"iDataSort": 6},
+                                     {"bSortable": true},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false}
+                     ],
+       "iDisplayLength": 500,
+		"oLanguage": {
+			"sLengthMenu": "Отображать по _MENU_ записей",
+			"sZeroRecords": "Ничего не найдено",
+			"sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+			"sInfoEmpty": "Нет файлов",
+			"sInfoFiltered": "(всего записей _MAX_)",
+			"sSearch":       "Поиск:",
+			"sUrl":          "",
+			"oPaginate": {
+				"sFirst": "Первая",
+				"sPrevious": "Предыдущая",
+				"sNext": "Следующая",
+				"sLast": "Последняя"
+			},
+			"oAria": {
+				"sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+				"sSortDescending": ": активировать для сортировки столбцов по убыванию"	
+			}
+		},
+
+     } );
+
+});
+
+if ($('#table_warn0')) {
+    $('#table_warn0').dataTable({
+       "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+		"paging": true,
+       "aoColumns": [
+                                     {"iDataSort": 7, "width":"70%"},
+                                     {"iDataSort": 5},
+                                     {"iDataSort": 6},
+                                     {"bSortable": true},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false}
+                     ],
+			         "iDisplayLength": 500,
+			  		"oLanguage": {
+			  			"sLengthMenu": "Отображать по _MENU_ записей",
+			  			"sZeroRecords": "Ничего не найдено",
+			  			"sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+			  			"sInfoEmpty": "Нет файлов",
+			  			"sInfoFiltered": "(всего записей _MAX_)",
+			  			"sSearch":       "Поиск:",
+			  			"sUrl":          "",
+			  			"oPaginate": {
+			  				"sFirst": "Первая",
+			  				"sPrevious": "Предыдущая",
+			  				"sNext": "Следующая",
+			  				"sLast": "Последняя"
+			  			},
+			  			"oAria": {
+			  				"sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+			  				"sSortDescending": ": активировать для сортировки столбцов по убыванию"	
+			  			}
+		}
+
+     } );
+}
+
+if ($('#table_warn1')) {
+    $('#table_warn1').dataTable({
+       "aLengthMenu": [[100 , 500, -1], [100, 500, "All"]],
+		"paging": true,
+       "aoColumns": [
+                                     {"iDataSort": 7, "width":"70%"},
+                                     {"iDataSort": 5},
+                                     {"iDataSort": 6},
+                                     {"bSortable": true},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false},
+                                     {"bVisible": false}
+                     ],
+			         "iDisplayLength": 500,
+			  		"oLanguage": {
+			  			"sLengthMenu": "Отображать по _MENU_ записей",
+			  			"sZeroRecords": "Ничего не найдено",
+			  			"sInfo": "Отображается c _START_ по _END_ из _TOTAL_ файлов",
+			  			"sInfoEmpty": "Нет файлов",
+			  			"sInfoFiltered": "(всего записей _MAX_)",
+			  			"sSearch":       "Поиск:",
+			  			"sUrl":          "",
+			  			"oPaginate": {
+			  				"sFirst": "Первая",
+			  				"sPrevious": "Предыдущая",
+			  				"sNext": "Следующая",
+			  				"sLast": "Последняя"
+			  			},
+			  			"oAria": {
+			  				"sSortAscending":  ": активировать для сортировки столбца по возрастанию",
+			  				"sSortDescending": ": активировать для сортировки столбцов по убыванию"	
+			  			}
+		}
+
+     } );
+}
+
+
+</script>
+<!-- [][254205]  -->
+ </body>
+</html>
